@@ -2,6 +2,11 @@
 
 基于 SpringBoot 3 + MyBatis Plus + MySQL + JWT 的个人博客系统全流程测试（功能 / 接口 / UI 自动化 / 性能）。
 
+## 📊 在线报告
+
+- [UI 自动化报告（Surefire）](https://wangfei-11.github.io/blog-test/ui-report/surefire-report.html)
+- [测试总结报告](docs/测试总结报告.md)
+
 ## 测试成果
 
 | 测试类型 | 数量 | 结果 |
@@ -32,6 +37,20 @@ blog-test/
 └── jmeter/
     └── blog-压测.jmx           # 登录/列表/详情三接口压测脚本（100 并发）
 ```
+
+## 运行说明
+
+### UI 自动化（ui_test/）
+
+```bash
+# 前置：后端 http://localhost:8081 已启动，本机装有 Chrome
+mvn test                    # 运行全部 25 条用例
+mvn surefire-report:report  # 生成 HTML 报告（target/site/surefire-report.html）
+```
+
+### 性能测试（jmeter/）
+
+用 JMeter 5.6+ 打开 `blog-压测.jmx`，运行后查看聚合报告（脚本内置 token 提取与业务断言）。
 
 ## 报告入口
 

@@ -1,0 +1,8 @@
+com\blog\list\ListTest.class
+com\blog\add\AddTest.class
+com\blog\common\BaseTest.class
+com\blog\smoke\SmokeTest.class
+com\blog\common\UiHelper.class
+com\blog\detail\DetailTest.class
+com\blog\login\LoginTest.class
+com\blog\update\UpdateTest.class
